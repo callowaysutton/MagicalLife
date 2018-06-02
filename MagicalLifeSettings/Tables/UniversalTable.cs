@@ -14,7 +14,7 @@ namespace MagicalLifeSettings.Tables
         /// <summary>
         /// ScreenWidth, ScreenHeight
         /// </summary>
-        private List<Tuple<int, int>> Data = new List<Tuple<int, int>>()
+        private readonly List<Tuple<int, int>> Data = new List<Tuple<int, int>>()
         {
             new Tuple<int, int>(1920, 1080)
         };
