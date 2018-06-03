@@ -19,9 +19,9 @@ namespace MagicalLifeSettings.Tables
             new Tuple<int, int>(1920, 1080)
         };
 
-        public Tuple<int, int> GetData(Resolution resolution)
+        public Tuple<int, int> GetData()
         {
-            int index = (int)resolution;
+            int index = (int)ResolutionUtil.Resolution;
 
             if (index < this.Data.Count)
             {

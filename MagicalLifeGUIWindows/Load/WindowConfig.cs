@@ -1,4 +1,5 @@
-﻿using MagicalLifeSettings.Storage;
+﻿using MagicalLifeSettings;
+using MagicalLifeSettings.Storage;
 
 namespace MagicalLifeGUIWindows.Load
 {
@@ -13,8 +14,19 @@ namespace MagicalLifeGUIWindows.Load
         /// <param name="game"></param>
         public void ConfigureMainWindow(Game1 game)
         {
-            game.Graphics.PreferredBackBufferHeight = MainWindow.Default.ScreenSize.Height;
-            game.Graphics.PreferredBackBufferWidth = MainWindow.Default.ScreenSize.Width;
+            int width;
+            int height;
+
+            switch (ResolutionUtil.Resolution)
+            {
+                default:
+                    width = 1920;
+                    height = 1080;
+                    break;
+            }
+
+            game.Graphics.PreferredBackBufferHeight = height;
+            game.Graphics.PreferredBackBufferWidth = width;
 
             //Initialize main menu
             //GUI.MainMenu.MainMenu.Initialize();
