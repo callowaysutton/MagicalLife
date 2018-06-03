@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace MagicalLifeSettings.Tables.UI.Menus
 {
-    /// <summary>
-    /// Holds some GUI data for the main menu.
-    /// </summary>
-    public class MainMenuTable
+    public class NewGameMenuTable
     {
         /// <summary>
-        /// Button Width, Button Height
+        /// Button Width, Button Height, Input box width, input box height
         /// </summary>
         private readonly List<Tuple<int, int>> Data = new List<Tuple<int, int>>()
         {

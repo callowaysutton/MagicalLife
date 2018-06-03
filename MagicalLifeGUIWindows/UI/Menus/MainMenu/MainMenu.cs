@@ -1,6 +1,7 @@
 ﻿using GeonBit.UI;
 using GeonBit.UI.Entities;
 using MagicalLifeAPI.Universal;
+using MagicalLifeGUIWindows.UI.Menus.MainMenu.SubMenus;
 using MagicalLifeSettings.Tables;
 using MagicalLifeSettings.Tables.UI.Menus;
 using Microsoft.Xna.Framework;
@@ -29,9 +30,9 @@ namespace MagicalLifeGUIWindows.UI.Menus.MainMenu
             Tuple<int, int> screenSize = this.UniversalTable.GetData();
             Panel ret = new Panel(new Vector2(screenSize.Item1, screenSize.Item2));
             MainMenuTable table = new MainMenuTable();
-            Tuple<int, int, int, int, int, int, int> data = table.GetData();
+            Tuple<int, int> data = table.GetData();
 
-            Vector2 buttonSize = new Vector2(data.Item2, data.Item3);
+            Vector2 buttonSize = new Vector2(data.Item1, data.Item2);
 
             Button newGame = new Button("New Game");
             Button hostGame = new Button("Host Game");
@@ -43,6 +44,9 @@ namespace MagicalLifeGUIWindows.UI.Menus.MainMenu
             joinGame.Size = buttonSize;
             quit.Size = buttonSize;
 
+            newGame.OnClick = NewGameButtonClick;
+            hostGame.OnClick = HostGameButtonClick;
+            joinGame.OnClick = JoinGameButtonClick;
             quit.OnClick = QuitButtonClick;
 
             ret.AddChild(newGame);
@@ -56,6 +60,21 @@ namespace MagicalLifeGUIWindows.UI.Menus.MainMenu
         private void QuitButtonClick(Entity entity)
         {
             UniversalEvents.GameExitHandler();
+        }
+
+        private void NewGameButtonClick(Entity entity)
+        {
+            UserInterface.Active.AddEntity(new NewGameMenu().GetNewPanel());
+        }
+
+        private void HostGameButtonClick(Entity entity)
+        {
+
+        }
+
+        private void JoinGameButtonClick(Entity entity)
+        {
+
         }
     }
 }

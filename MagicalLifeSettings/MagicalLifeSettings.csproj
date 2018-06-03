@@ -65,6 +65,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Tables\UI\Menus\MainMenuTable.cs" />
+    <Compile Include="Tables\UI\Menus\NewGameMenuTable.cs" />
     <Compile Include="Tables\UniversalTable.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
