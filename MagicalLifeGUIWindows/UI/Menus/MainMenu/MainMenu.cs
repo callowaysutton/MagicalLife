@@ -69,7 +69,7 @@ namespace MagicalLifeGUIWindows.UI.Menus.MainMenu
 
         private void HostGameButtonClick(Entity entity)
         {
-
+            UserInterface.Active.AddEntity(new HostGameMenu().GetNewPanel());
         }
 
         private void JoinGameButtonClick(Entity entity)

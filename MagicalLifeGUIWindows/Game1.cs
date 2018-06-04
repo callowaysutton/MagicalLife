@@ -55,7 +55,7 @@ namespace MagicalLifeGUIWindows
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            SpriteBatch = new SpriteBatch(GraphicsDevice);
+            this.SpriteBatch = new SpriteBatch(GraphicsDevice);
 
             Loader load = new Loader();
             string msg = string.Empty;
