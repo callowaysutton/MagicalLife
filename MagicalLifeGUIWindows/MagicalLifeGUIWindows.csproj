@@ -104,6 +104,7 @@
     <Compile Include="UI\Menus\IMenu.cs" />
     <Compile Include="UI\Menus\MainMenu\MainMenu.cs" />
     <Compile Include="UI\Menus\MainMenu\SubMenus\HostGameMenu.cs" />
+    <Compile Include="UI\Menus\MainMenu\SubMenus\JoinGameMenu.cs" />
     <Compile Include="UI\Menus\MainMenu\SubMenus\NewGameMenu.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
