@@ -28,8 +28,8 @@ namespace MagicalLifeGUIWindows
         /// Game constructor.
         public Game1()
         {
-            Graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            this.Graphics = new GraphicsDeviceManager(this);
+            this.Content.RootDirectory = "Content";
             Game1.AssetManager = this.Content;
             UniversalEvents.GameExit += this.UniversalEvents_GameExit;
         }
