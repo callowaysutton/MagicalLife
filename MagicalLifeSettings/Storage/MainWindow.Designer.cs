@@ -12,7 +12,7 @@ namespace MagicalLifeSettings.Storage {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
     public sealed partial class MainWindow : global::System.Configuration.ApplicationSettingsBase {
         
         private static MainWindow defaultInstance = ((MainWindow)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new MainWindow())));
@@ -25,10 +25,10 @@ namespace MagicalLifeSettings.Storage {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int ScreenSize {
+        [global::System.Configuration.DefaultSettingValueAttribute("1920, 1080")]
+        public global::System.Drawing.Size ScreenSize {
             get {
-                return ((int)(this["ScreenSize"]));
+                return ((global::System.Drawing.Size)(this["ScreenSize"]));
             }
             set {
                 this["ScreenSize"] = value;
