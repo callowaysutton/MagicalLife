@@ -9,6 +9,6 @@ namespace MagicalLifeSettings
 {
     public static class ResolutionUtil
     {
-        public static Resolution Resolution = (Resolution)MainWindow.Default.ScreenSize;
+        public static Resolution Resolution = (Resolution)MainWindow.Default.Resolution;
     }
 }

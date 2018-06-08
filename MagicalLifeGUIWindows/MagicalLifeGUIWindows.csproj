@@ -93,15 +93,35 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Input2\BoundHandler.cs" />
+    <Compile Include="Input2\ClickBounds.cs" />
+    <Compile Include="Input2\Comparators\BoundsSorter.cs" />
+    <Compile Include="Input2\Comparators\ClickBoundsSorter.cs" />
+    <Compile Include="Input2\Comparators\ContainerSorter.cs" />
+    <Compile Include="Input2\EscapeHandler.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Input2\History\HistoricalInput.cs" />
+    <Compile Include="Input2\History\HistoricalInputFactory.cs" />
+    <Compile Include="Input2\History\InputEventArgs.cs" />
+    <Compile Include="Input2\History\InputHistory.cs" />
+    <Compile Include="Input2\Input Handlers\InputHandlers.cs" />
+    <Compile Include="Input2\Input Handlers\LivingBoundHandler.cs" />
+    <Compile Include="Input2\Input Handlers\LivingMoveOrderInputHandler.cs" />
+    <Compile Include="Input2\KeyboardHandler.cs" />
     <Compile Include="Load\Initializer.cs" />
     <Compile Include="Load\TextureLoader.cs" />
     <Compile Include="Load\WindowConfig.cs" />
+    <Compile Include="MapUI\GUIRenderer.cs" />
+    <Compile Include="MapUI\MapRenderer.cs" />
+    <Compile Include="MapUI\RenderingPipe.cs" />
+    <Compile Include="MapUI\RenderUtils.cs" />
+    <Compile Include="MapUI\Reusable\GUIContainer.cs" />
+    <Compile Include="MapUI\Reusable\GUIElement.cs" />
     <Compile Include="Map\ConnectedTextureManager.cs" />
     <Compile Include="Map\RenderingData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Menus\IMenu.cs" />
+    <Compile Include="UI\IMenu.cs" />
     <Compile Include="UI\Menus\MainMenu\MainMenu.cs" />
     <Compile Include="UI\Menus\MainMenu\SubMenus\HostGameMenu.cs" />
     <Compile Include="UI\Menus\MainMenu\SubMenus\JoinGameMenu.cs" />

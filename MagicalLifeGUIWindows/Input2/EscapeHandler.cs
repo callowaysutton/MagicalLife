@@ -26,8 +26,6 @@ namespace MagicalLifeGUIWindows.Input
         {
             //Show main menu.
             MasterLog.DebugWriteLine("Escape key pressed");
-            //MainMenu.ToggleMainMenu();
-            MenuHandler.Back();
         }
     }
 }
