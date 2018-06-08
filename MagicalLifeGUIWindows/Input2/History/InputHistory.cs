@@ -20,7 +20,7 @@ namespace MagicalLifeGUIWindows.Input.History
         private static bool ShiftDown = false;
 
         /// <summary>
-        /// If true, the ctrl key is down.
+        /// If true, the ctr key is down.
         /// </summary>
         private static bool CtrlDown = false;
 

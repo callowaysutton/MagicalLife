@@ -19,24 +19,26 @@ namespace MagicalLifeGUIWindows.Rendering.Map
         /// <param name="spBatch"></param>
         public static void DrawMap(ref SpriteBatch spBatch)
         {
-            ProtoArray<Tile> tiles = World.MainWorld.Tiles;
-
-            int xSize = tiles.Width;
-            int ySize = tiles.Height;
-            int x = 0;
-            int y = 0;
-
-            while (x < xSize)
+            if (World.MainWorld != null && World.MainWorld.Tiles != null)
             {
-                while (y < ySize)
+                ProtoArray<Tile> tiles = World.MainWorld.Tiles;
+                int xSize = tiles.Width;
+                int ySize = tiles.Height;
+                int x = 0;
+                int y = 0;
+
+                while (x < xSize)
                 {
-                    Tile tile = tiles[x, y];
-                    Microsoft.Xna.Framework.Point start = new Microsoft.Xna.Framework.Point(RenderingPipe.tileSize.X * x, RenderingPipe.tileSize.Y * y);
-                    DrawTile(tile, ref spBatch, start);
-                    y++;
+                    while (y < ySize)
+                    {
+                        Tile tile = tiles[x, y];
+                        Microsoft.Xna.Framework.Point start = new Microsoft.Xna.Framework.Point(RenderingPipe.tileSize.X * x, RenderingPipe.tileSize.Y * y);
+                        DrawTile(tile, ref spBatch, start);
+                        y++;
+                    }
+                    y = 0;
+                    x++;
                 }
-                y = 0;
-                x++;
             }
         }
 

@@ -3,7 +3,10 @@ using MagicalLifeAPI.Load;
 using MagicalLifeAPI.Networking.External_Type_Serialization;
 using MagicalLifeAPI.Universal;
 using MagicalLifeAPI.World;
+using MagicalLifeGUIWindows.Input;
 using MagicalLifeGUIWindows.Load;
+using MagicalLifeGUIWindows.Rendering.GUI;
+using MagicalLifeGUIWindows.Rendering.Map;
 using MagicalLifeGUIWindows.UI.Menus.MainMenu;
 using MagicalLifeSettings.Storage;
 using Microsoft.Xna.Framework;
@@ -45,6 +48,7 @@ namespace MagicalLifeGUIWindows
         {
             UserInterface.Initialize(this.Content, BuiltinThemes.hd);
             UserInterface.Active.AddEntity(new MainMenu().GetNewPanel());
+            KeyboardHandler.Initialize();
 
             // call base initialize function
             base.Initialize();
@@ -90,7 +94,10 @@ namespace MagicalLifeGUIWindows
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // GeonBit.UI: draw UI using the spriteBatch you created above
-            UserInterface.Active.Draw(SpriteBatch);
+            UserInterface.Active.Draw(this.SpriteBatch);
+            this.SpriteBatch.Begin();
+            MapRenderer.DrawMap(ref this.SpriteBatch);
+            this.SpriteBatch.End();
 
             // call base draw function
             base.Draw(gameTime);

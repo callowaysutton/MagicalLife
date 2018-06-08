@@ -47,7 +47,7 @@ namespace MagicalLifeGUIWindows.Rendering
                 MapRenderer.DrawMap(ref spBatch);
             }
 
-            DrawGUI(ref spBatch);
+            //DrawGUI(ref spBatch);
 
             //DrawMouseLocation(ref spBatch);
         }
