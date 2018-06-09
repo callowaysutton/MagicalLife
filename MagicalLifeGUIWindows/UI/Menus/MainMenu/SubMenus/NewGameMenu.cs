@@ -1,4 +1,5 @@
-﻿using GeonBit.UI.Entities;
+﻿using GeonBit.UI;
+using GeonBit.UI.Entities;
 using MagicalLifeAPI.World;
 using MagicalLifeClient;
 using MagicalLifeServer;
@@ -65,6 +66,8 @@ namespace MagicalLifeGUIWindows.UI.Menus.MainMenu.SubMenus
 
             if (widthSuccess && lengthSuccess && width > 0 && length > 0)
             {
+                //UserInterface.Active.Clear();
+                UserInterface.Active.Root.Visible = false;
                 World.Initialize(width, length, new Dirtland());
                 //World.Initialize(width, length, new StoneSprinkle());
             }

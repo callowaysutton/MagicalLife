@@ -111,7 +111,6 @@
     <Compile Include="Load\Initializer.cs" />
     <Compile Include="Load\TextureLoader.cs" />
     <Compile Include="Load\WindowConfig.cs" />
-    <Compile Include="MapUI\GUIRenderer.cs" />
     <Compile Include="MapUI\MapRenderer.cs" />
     <Compile Include="MapUI\RenderingPipe.cs" />
     <Compile Include="MapUI\RenderUtils.cs" />

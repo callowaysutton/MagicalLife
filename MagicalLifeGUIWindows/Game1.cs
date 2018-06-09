@@ -5,7 +5,6 @@ using MagicalLifeAPI.Universal;
 using MagicalLifeAPI.World;
 using MagicalLifeGUIWindows.Input;
 using MagicalLifeGUIWindows.Load;
-using MagicalLifeGUIWindows.Rendering.GUI;
 using MagicalLifeGUIWindows.Rendering.Map;
 using MagicalLifeGUIWindows.UI.Menus.MainMenu;
 using MagicalLifeSettings.Storage;
@@ -35,6 +34,7 @@ namespace MagicalLifeGUIWindows
             this.Content.RootDirectory = "Content";
             Game1.AssetManager = this.Content;
             UniversalEvents.GameExit += this.UniversalEvents_GameExit;
+            this.IsMouseVisible = true;
         }
 
         private void UniversalEvents_GameExit(object sender, System.EventArgs e)
@@ -48,7 +48,6 @@ namespace MagicalLifeGUIWindows
         {
             UserInterface.Initialize(this.Content, BuiltinThemes.hd);
             UserInterface.Active.AddEntity(new MainMenu().GetNewPanel());
-            KeyboardHandler.Initialize();
 
             // call base initialize function
             base.Initialize();
@@ -91,7 +90,7 @@ namespace MagicalLifeGUIWindows
         protected override void Draw(GameTime gameTime)
         {
             // clear buffer
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            this.GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // GeonBit.UI: draw UI using the spriteBatch you created above
             UserInterface.Active.Draw(this.SpriteBatch);
