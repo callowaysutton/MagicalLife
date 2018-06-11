@@ -1,6 +1,11 @@
 SneakyTactician  <SneakyTactician@outlook.com>
 
 ---
+## [Version 0.0.8]
+#### GUI
+* Now using Geon-Bit for menus
+
+---
 ## [Version 0.0.7]
 #### GUI
 * Added buttons to the main menu to allow the user to join and host a multiplayer game

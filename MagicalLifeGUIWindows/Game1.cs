@@ -43,7 +43,7 @@ namespace MagicalLifeGUIWindows
         }
 
         /// Allows the game to perform any initialization it needs to before starting to run.
-        /// here we create and init the UI manager.
+        /// here we create and initialize the UI manager.
         protected override void Initialize()
         {
             UserInterface.Initialize(this.Content, BuiltinThemes.hd);
